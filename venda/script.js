@@ -1,5 +1,6 @@
+import { baseurl } from "../api.js";
 async function selectProduto(){
-    const produtos = await fetch("http://localhost:3001/produtos")
+    const produtos = await fetch(`${baseurl}/produtos`)
     const produtosJson = await produtos.json()
     const selecione = document.querySelector("select")
     produtosJson.forEach(element => {

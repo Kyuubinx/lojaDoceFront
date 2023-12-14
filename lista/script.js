@@ -1,9 +1,9 @@
-
+import { baseurl } from "../api.js";
 const myHeaders = {
     "Content-Type" : "application/json"
 }
 async function lista() { 
-    const res = await fetch("http://localhost:3001/produtos")
+    const res = await fetch(`${baseurl}/produtos`)
     const prod = await res.json()
     const ul = document.querySelector("ul")
     ul.innerHTML = ""
