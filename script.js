@@ -1,3 +1,4 @@
+import { baseurl } from "./api.js";
 import {toastify} from "./toastify.js"
 const myHeaders = {
     "Content-Type": "application/json", 
@@ -13,7 +14,7 @@ const myHeaders = {
     console.log(user)
     const bodyJson = JSON.stringify(user)
     const res = await fetch(
-        "http://localhost:3001/login",
+        `${baseurl}/login`,
     { 
         
         headers:myHeaders, 
